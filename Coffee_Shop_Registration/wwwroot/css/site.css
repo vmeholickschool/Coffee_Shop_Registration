@@ -1,22 +1,52 @@
-html {
-  font-size: 14px;
+@ {
+    ViewData ["Title"] = "Registration";
 }
 
-@media (min-width: 768px) {
-  html {
+<style >
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.content {
+    margin: 20px auto; /* Adjust the margin to control the space between the content and the top */
+    max-width: 400px; /* Adjust the max-width to control the width of the content */
+    padding-bottom: 100px; /* Adjust padding-bottom to create space for the fixed footer */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+input[type="number"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
     font-size: 16px;
-  }
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
-}
+    button:hover {
+        background-color: #0056b3;
+    }

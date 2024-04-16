@@ -1,25 +1,64 @@
-﻿@{
-    ViewData["Title"] = "Registration";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+    <div class="content">
+        <h2>Registration Form</h2>
 
-<h2>Registration Form</h2>
+        <form asp-controller="Registration" asp-action="Register" method="post">
+            <div>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required />
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required />
+            </div>
+            <button type="submit">Submit</button>
+        </form>
 
-<form asp-controller="Registration" asp-action="Register" method="post">
-    <div>
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required />
+        <h2>Coffee Shop Registration</h2>
+
+        <form asp-controller="CoffeeShop" asp-action="Register" method="post">
+            <div>
+                <label for="shopName">Shop Name:</label>
+                <input type="text" id="shopName" name="shopName" required />
+            </div>
+            <div>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required />
+            </div>
+            <div>
+                <label for="type">Type of Coffee Shop:</label>
+                <select id="type" name="type">
+                    <option value="Café">Café</option>
+                    <option value="Espresso Bar">Espresso Bar</option>
+                    <option value="Coffee Roastery">Coffee Roastery</option>
+                    <option value="Bakery with Coffee">Bakery with Coffee</option>
+                </select>
+            </div>
+            <div>
+                <label for="seatingCapacity">Seating Capacity:</label>
+                <input type="number" id="seatingCapacity" name="seatingCapacity" min="1" required />
+            </div>
+            <button type="submit">Submit</button>
+        </form>
     </div>
-    <div>
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required />
-    </div>
-    <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-    </div>
-    <div>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
-    </div>
-    <button type="submit">Submit</button>
-</form>
+    <footer>
+        © 2024 - Coffee_Shop_Registration - Privacy
+    </footer>
+</body>
+</html>
